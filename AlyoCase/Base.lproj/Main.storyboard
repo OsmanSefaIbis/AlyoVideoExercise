@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--VideoVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VideoVC" customModule="AlyoCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nxs-cu-fvb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxK-aP-YdP" userLabel="PlayerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="379.66666666666669"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-hK-Y6a">
+                                                <rect key="frame" x="0.0" y="1.6666666666666572" width="393" height="376.66666666666674"/>
+                                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstItem="Ozw-hK-Y6a" firstAttribute="top" secondItem="BxK-aP-YdP" secondAttribute="top" id="1ma-lC-dDy"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ozw-hK-Y6a" secondAttribute="trailing" id="3Po-wy-6Tn"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ozw-hK-Y6a" secondAttribute="bottom" id="q0g-es-Bri"/>
+                                            <constraint firstItem="Ozw-hK-Y6a" firstAttribute="leading" secondItem="BxK-aP-YdP" secondAttribute="leading" id="sAp-T2-CtE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pe-sy-Ofb" userLabel="TableViewContainer">
+                                        <rect key="frame" x="0.0" y="379.66666666666674" width="393" height="379.33333333333326"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ld-Xj-dlq">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="379.33333333333331"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFm-Yk-KKJ" userLabel="Stop">
+                                                <rect key="frame" x="141.33333333333334" y="344.99999999999994" width="110.66666666666666" height="34.333333333333314"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Stop Player"/>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJ4-HB-WOu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="gFm-Yk-KKJ" firstAttribute="centerX" secondItem="4pe-sy-Ofb" secondAttribute="centerX" id="0X4-it-2bT"/>
+                                            <constraint firstItem="0Ld-Xj-dlq" firstAttribute="top" secondItem="4pe-sy-Ofb" secondAttribute="top" id="5Dk-eg-frF"/>
+                                            <constraint firstItem="gFm-Yk-KKJ" firstAttribute="bottom" secondItem="0Ld-Xj-dlq" secondAttribute="bottom" id="R7e-PY-iQn"/>
+                                            <constraint firstAttribute="bottom" secondItem="gFm-Yk-KKJ" secondAttribute="bottom" id="hdr-aA-6N2"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Ld-Xj-dlq" secondAttribute="trailing" id="tlC-6v-JPl"/>
+                                            <constraint firstItem="0Ld-Xj-dlq" firstAttribute="leading" secondItem="4pe-sy-Ofb" secondAttribute="leading" id="ygH-oq-uKi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nxs-cu-fvb" secondAttribute="bottom" id="6Px-fh-YEr"/>
+                            <constraint firstItem="nxs-cu-fvb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XdZ-fb-e7X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nxs-cu-fvb" secondAttribute="trailing" id="re5-Op-fTJ"/>
+                            <constraint firstItem="nxs-cu-fvb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wpK-4Q-a16"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="BxK-aP-YdP" id="zkZ-sK-woS"/>
+                        <outlet property="stopPlayerButton" destination="gFm-Yk-KKJ" id="Ocs-ZV-FFu"/>
+                        <outlet property="tableView" destination="0Ld-Xj-dlq" id="XQF-fF-NBD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="video.square" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
